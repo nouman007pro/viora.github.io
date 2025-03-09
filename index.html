@@ -1,7 +1,22 @@
-<html>
-  <header>
-    <body>
-       <script type="text/babel" src="App.js"></script>
-    </body>
-  </header>
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+</head>
+<body>
+    <!-- Root div where the React app will be rendered -->
+    <div id="root"></div>
+
+    <!-- Load React and ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load Babel for JSX compilation (only needed for development) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Load your React App.js file -->
+    <script type="text/babel" src="App.js"></script>
+</body>
+</html>
