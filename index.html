@@ -1,22 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viora Blog</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Root div where the React app will be rendered -->
-    <div id="root"></div>
+  <nav class="navbar">
+    <div class="logo">Viora</div>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active" data-page="Home">Home</a></li>
+      <li><a href="#" class="nav-link" data-page="Viral">Viral</a></li>
+      <li><a href="#" class="nav-link" data-page="Fashion">Fashion</a></li>
+      <li><a href="#" class="nav-link" data-page="Opinion">Opinion</a></li>
+      <li><a href="#" class="nav-link" data-page="World Update">World Update</a></li>
+      <li><a href="#" class="nav-link" data-page="Videos">Videos</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search..." class="search-input" id="search-input">
+    </div>
+  </nav>
 
-    <!-- Load React and ReactDOM -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <div class="container">
+    <div class="cards-section" id="content">
+      <!-- Content will be dynamically inserted here -->
+    </div>
+    <div class="dots-container">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
 
-    <!-- Load Babel for JSX compilation (only needed for development) -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <footer class="footer">
+    <div class="footer-left">@All Rights Reserved</div>
+    <div class="footer-center">
+      <img src="https://via.placeholder.com/100x50.png?text=Logo" alt="Logo" class="logo-image">
+    </div>
+    <div class="footer-right">mindmentor2025@gmail.com</div>
+  </footer>
 
-    <!-- Load your React App.js file -->
-    <script type="text/babel" src="App.js"></script>
+  <script src="script.js">// script.js
+const sections = ["Home", "Viral", "Fashion", "Opinion", "World Update", "Videos"];
+let activePage = "Home";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const searchInput = document.getElementById("search-input");
+  const contentSection = document.getElementById("content");
+  const dots = document.querySelectorAll(".dot");
+
+  // Handle navigation
+  navLinks.forEach((link, index) => {
+    link.addEventListener("click", () => {
+      activePage = sections[index];
+      renderContent();
+      updateActiveDot(index);
+    });
+  });
+
+  // Handle search
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredSections = sections.filter(section => section.toLowerCase().includes(searchTerm));
+    renderContent(filteredSections);
+  });
+
+  // Handle dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      activePage = sections[index];
+      renderContent();
+      updateActiveDot(index);
+    });
+  });
+
+  // Render content based on active page
+  function renderContent(filteredSections = sections) {
+    let content = "";
+    if (activePage === "Home") {
+      content = `
+        <div class="welcome-section">
+          <h1>Stay home and make something.</h1>
+          <p>Welcome! The Viora blog was founded in 2025. Since then, we've published over 4,500 posts. You can expect all kinds of recipes, craft projects, room tours, and more.</p>
+        </div>
+        <div class="home-grid">
+          ${filteredSections.map((section, i) => `
+            <div class="grid-item">
+              <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=${section}" alt="${section}" class="grid-image">
+              <h3>${section}</h3>
+              <p>Upload Date: 12.3.2025</p>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    } else {
+      content = filteredSections.map((section, i) => `
+        <div class="grid-item">
+          <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=${section}" alt="${section}" class="grid-image">
+          <h3>${section}</h3>
+          <p>Upload Date: 12.3.2025</p>
+        </div>
+      `).join("");
+    }
+    contentSection.innerHTML = content;
+  }
+
+  // Update active dot
+  function updateActiveDot(index) {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+  }
+
+  // Initial render
+  renderContent();
+});</script><style>/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #F3F4F6;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1E3A8A;
+  padding: 10px 20px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid white;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-input {
+  padding: 5px;
+  color: black;
+  width: 200px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.cards-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.grid-item {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.grid-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1E3A8A;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.logo-image {
+  width: 100px;
+  height: 50px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot.active {
+  background: #1E3A8A;
+}</style>
 </body>
 </html>
