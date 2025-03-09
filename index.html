@@ -338,7 +338,7 @@
     }
 
     /* teer Buttons */
-    .teer1 {
+    .teer {
       background: #1E3A8A;
       color: white;
       border: none;
@@ -354,7 +354,7 @@
       transition: background 0.3s ease;
     }
 
-    .teer1:hover {
+    .teer:hover {
       background: #152C5B;
     }
 
@@ -466,15 +466,15 @@
       </div>
 
       <!-- Right teer -->
-      <button class="teer1" onclick="slideRight()">&#10095;</button>
+      <button class="teer" onclick="slideRight()">&#10095;</button>
     </div>
   </div>
 
   <!-- JavaScript for Sliding Functionality -->
   <script>
-    const tasveer = document.getElementById('tasveer1');
+    const tasveer = document.getElementById('tasveer');
     let scrollPosition = 0;
-    const cardWidth = document.querySelector('.card1').offsetWidth + 20; // Card width + gap
+    const cardWidth = document.querySelector('.tasveer').offsetWidth + 20; // Card width + gap
 
     function slideLeft() {
       scrollPosition = Math.max(scrollPosition - cardWidth * 3, 0); // Move left by 3 cards
@@ -482,9 +482,9 @@
     }
 
     function slideRight() {
-      const maxScroll = tasveer1.scrollWidth - tasveer1.clientWidth;
+      const maxScroll = tasveer.scrollWidth - tasveer.clientWidth;
       scrollPosition = Math.min(scrollPosition + cardWidth * 3, maxScroll); // Move right by 3 cards
-      tasveer1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      tasveer.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
   </script>
 
