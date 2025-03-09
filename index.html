@@ -3,253 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viora Blog</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Blogs & News Website</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #1E3A8A;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-card h3 {
+      margin: 15px;
+      font-size: 1.5rem;
+    }
+
+    .blog-card p {
+      margin: 0 15px 15px;
+      color: #666;
+    }
+
+    .blog-card a {
+      display: inline-block;
+      margin: 0 15px 15px;
+      padding: 10px 20px;
+      background: #1E3A8A;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .blog-card a:hover {
+      background: #152C5B;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Viora</div>
-    <ul class="nav-links">
-      <li><a href="#" class="nav-link active" data-page="Home">Home</a></li>
-      <li><a href="#" class="nav-link" data-page="Viral">Viral</a></li>
-      <li><a href="#" class="nav-link" data-page="Fashion">Fashion</a></li>
-      <li><a href="#" class="nav-link" data-page="Opinion">Opinion</a></li>
-      <li><a href="#" class="nav-link" data-page="World Update">World Update</a></li>
-      <li><a href="#" class="nav-link" data-page="Videos">Videos</a></li>
-    </ul>
-    <div class="search-bar">
-      <input type="text" placeholder="Search..." class="search-input" id="search-input">
-    </div>
+  <!-- Header -->
+  <header>
+    <h1>Blogs & News</h1>
+    <p>Your source for the latest updates and stories</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#tech">Tech</a>
+    <a href="#lifestyle">Lifestyle</a>
+    <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
-    <div class="cards-section" id="content">
-      <!-- Content will be dynamically inserted here -->
-    </div>
-    <div class="dots-container">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+    <div class="blog-grid">
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=Blog+1" alt="Blog 1">
+        <h3>10 Tips for Better Productivity</h3>
+        <p>Discover practical tips to boost your productivity and achieve your goals faster.</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/2345678/pexels-photo-2345678.jpeg?text=Blog+2" alt="Blog 2">
+        <h3>Top 5 Travel Destinations in 2024</h3>
+        <p>Explore the most exciting travel destinations to visit this year.</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/3456789/pexels-photo-3456789.jpeg?text=Blog+3" alt="Blog 3">
+        <h3>The Future of Artificial Intelligence</h3>
+        <p>Learn how AI is transforming industries and what the future holds.</p>
+        <a href="#">Read More</a>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="blog-card">
+        <img src="https://images.pexels.com/photos/4567890/pexels-photo-4567890.jpeg?text=Blog+4" alt="Blog 4">
+        <h3>Healthy Eating Habits for 2024</h3>
+        <p>Start the year right with these healthy eating tips and recipes.</p>
+        <a href="#">Read More</a>
+      </div>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer-left">@All Rights Reserved</div>
-    <div class="footer-center">
-      <img src="https://via.placeholder.com/100x50.png?text=Logo" alt="Logo" class="logo-image">
-    </div>
-    <div class="footer-right">mindmentor2025@gmail.com</div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Blogs & News. All rights reserved.</p>
   </footer>
 
-  <script src="script.js">
-const sections = ["Home", "Viral", "Fashion", "Opinion", "World Update", "Videos"];
-let activePage = "Home";
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const searchInput = document.getElementById("search-input");
-  const contentSection = document.getElementById("content");
-  const dots = document.querySelectorAll(".dot");
-
-  // Handle navigation
-  navLinks.forEach((link, index) => {
-    link.addEventListener("click", () => {
-      activePage = sections[index];
-      renderContent();
-      updateActiveDot(index);
-    });
-  });
-
-  // Handle search
-  searchInput.addEventListener("input", () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filteredSections = sections.filter(section => section.toLowerCase().includes(searchTerm));
-    renderContent(filteredSections);
-  });
-
-  // Handle dots
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      activePage = sections[index];
-      renderContent();
-      updateActiveDot(index);
-    });
-  });
-
-  // Render content based on active page
-  function renderContent(filteredSections = sections) {
-    let content = "";
-    if (activePage === "Home") {
-      content = `
-        <div class="welcome-section">
-          <h1>Stay home and make something.</h1>
-          <p>Welcome! The Viora blog was founded in 2025. Since then, we've published over 4,500 posts. You can expect all kinds of recipes, craft projects, room tours, and more.</p>
-        </div>
-        <div class="home-grid">
-          ${filteredSections.map((section, i) => `
-            <div class="grid-item">
-              <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=${section}" alt="${section}" class="grid-image">
-              <h3>${section}</h3>
-              <p>Upload Date: 12.3.2025</p>
-            </div>
-          `).join("")}
-        </div>
-      `;
-    } else {
-      content = filteredSections.map((section, i) => `
-        <div class="grid-item">
-          <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=${section}" alt="${section}" class="grid-image">
-          <h3>${section}</h3>
-          <p>Upload Date: 12.3.2025</p>
-        </div>
-      `).join("");
-    }
-    contentSection.innerHTML = content;
-  }
-
-  // Update active dot
-  function updateActiveDot(index) {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
-  }
-
-  // Initial render
-  renderContent();
-});</script><style>/* styles.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #F3F4F6;
-  color: #333;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1E3A8A;
-  padding: 10px 20px;
-  color: white;
-  flex-wrap: wrap;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.nav-link.active {
-  border-bottom: 2px solid white;
-}
-
-.search-bar {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.search-input {
-  padding: 5px;
-  color: black;
-  width: 200px;
-}
-
-.container {
-  padding: 20px;
-}
-
-.cards-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.grid-item {
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.grid-image {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1E3A8A;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 20px;
-}
-
-.footer-left, .footer-right {
-  flex: 1;
-}
-
-.footer-center {
-  flex: 1;
-  text-align: center;
-}
-
-.logo-image {
-  width: 100px;
-  height: 50px;
-}
-
-.dots-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  margin: 5px;
-  background: #aaa;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.dot.active {
-  background: #1E3A8A;
-}</style>
+  <!-- JavaScript -->
+  <script>
+    // JavaScript for interactivity (if needed)
+    console.log("Website loaded successfully!");
+  </script>
 </body>
 </html>
