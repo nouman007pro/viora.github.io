@@ -337,8 +337,8 @@
       position: relative;
     }
 
-    /* Arrow Buttons */
-    .arrow1 {
+    /* teer Buttons */
+    .teer1 {
       background: #1E3A8A;
       color: white;
       border: none;
@@ -354,7 +354,7 @@
       transition: background 0.3s ease;
     }
 
-    .arrow1:hover {
+    .teer1:hover {
       background: #152C5B;
     }
 
@@ -363,7 +363,7 @@
       display: flex;
       gap: 20px;
       overflow: hidden;
-      width: calc(100% - 100px); /* Adjust for arrow buttons */
+      width: calc(100% - 100px); /* Adjust for teer buttons */
       margin: 0 auto;
     }
 
@@ -411,11 +411,11 @@
   <div class="container">
     <!-- Gallery -->
     <div class="gallery">
-      <!-- Left Arrow -->
-      <button class="arrow" onclick="slideLeft()">&#10094;</button>
+      <!-- Left teer -->
+      <button class="teer" onclick="slideLeft()">&#10094;</button>
 
       <!-- Image Card Box -->
-      <div class="card-box1" id="cardBox">
+      <div class="card-box1" id="tasveer">
         <!-- Card 1 -->
         <div class="slide-card">
           <img src="https://via.placeholder.com/300x150?text=Image+1" alt="Image 1">
@@ -465,26 +465,26 @@
         </div>
       </div>
 
-      <!-- Right Arrow -->
-      <button class="arrow1" onclick="slideRight()">&#10095;</button>
+      <!-- Right teer -->
+      <button class="teer1" onclick="slideRight()">&#10095;</button>
     </div>
   </div>
 
   <!-- JavaScript for Sliding Functionality -->
   <script>
-    const cardBox = document.getElementById('cardBox1');
+    const tasveer = document.getElementById('tasveer1');
     let scrollPosition = 0;
     const cardWidth = document.querySelector('.card1').offsetWidth + 20; // Card width + gap
 
     function slideLeft() {
       scrollPosition = Math.max(scrollPosition - cardWidth * 3, 0); // Move left by 3 cards
-      cardBox1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      tasveer1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
 
     function slideRight() {
-      const maxScroll = cardBox1.scrollWidth - cardBox1.clientWidth;
+      const maxScroll = tasveer1.scrollWidth - tasveer1.clientWidth;
       scrollPosition = Math.min(scrollPosition + cardWidth * 3, maxScroll); // Move right by 3 cards
-      cardBox1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      tasveer1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
   </script>
 
