@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Terms of Service - Viora4</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #1E3A8A;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    /* Content Sections */
+    h2 {
+      color: #1E3A8A;
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      color: #1E3A8A;
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    a {
+      color: #1E3A8A;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #1E3A8A;
+      color: white;
+      border-radius: 0 0 10px 10px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Viora4</h1>
+      <p>Your source for the latest blogs and news</p>
+    </header>
+
+    <!-- Privacy Policy -->
+    <section>
+      <h2>Privacy Policy</h2>
+      <p>At Viora4, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website.</p>
+
+      <h3>Information We Collect</h3>
+      <p>We may collect the following types of information:</p>
+      <ul>
+        <li><strong>Personal Information:</strong> Name, email address, and other contact details when you subscribe to our newsletter or create an account.</li>
+        <li><strong>Usage Data:</strong> Information about how you use our website, such as your IP address, browser type, and pages visited.</li>
+        <li><strong>Cookies:</strong> We use cookies to enhance your experience on our website. You can disable cookies in your browser settings if you prefer.</li>
+      </ul>
+
+      <h3>How We Use Your Information</h3>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Provide and improve our services.</li>
+        <li>Send you newsletters and updates (if you have subscribed).</li>
+        <li>Analyze website traffic and user behavior.</li>
+      </ul>
+
+      <h3>Data Security</h3>
+      <p>We implement industry-standard security measures to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+      <h3>Third-Party Links</h3>
+      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these sites.</p>
+
+      <h3>Changes to This Policy</h3>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page.</p>
+    </section>
+
+    <!-- Terms of Service -->
+    <section>
+      <h2>Terms of Service</h2>
+      <p>By using Viora4, you agree to the following terms and conditions:</p>
+
+      <h3>Acceptance of Terms</h3>
+      <p>Your access to and use of Viora4 is subject to these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
+
+      <h3>User Responsibilities</h3>
+      <p>You agree to:</p>
+      <ul>
+        <li>Use the website only for lawful purposes.</li>
+        <li>Not engage in any activity that disrupts or interferes with the website.</li>
+        <li>Respect the intellectual property rights of Viora4 and third parties.</li>
+      </ul>
+
+      <h3>Content Ownership</h3>
+      <p>All content on Viora4, including text, images, and graphics, is the property of Viora4 or its licensors and is protected by copyright laws.</p>
+
+      <h3>Limitation of Liability</h3>
+      <p>Viora4 is not liable for any damages arising from your use of the website. This includes, but is not limited to, direct, indirect, incidental, or consequential damages.</p>
+
+      <h3>Governing Law</h3>
+      <p>These Terms of Service are governed by the laws of [Your Country/State]. Any disputes will be resolved in the courts of [Your Country/State].</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Viora4. All rights reserved. | <a href="#">Contact Us</a></p>
+    </footer>
+  </div>
+</body>
+</html>
