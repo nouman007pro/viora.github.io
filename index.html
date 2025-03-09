@@ -80,55 +80,7 @@
       background: #152C5B;
     }
      
-    /* Fixed Image Card Box */
-    .card-box {
-      width: 100%;
-      height: 200px;
-      overflow: hidden;
-    }
-
-    .card-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Arrow Button */
-    .arrow-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #1E3A8A;
-      color: white;
-      padding: 10px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .arrow-button:hover {
-      background: #152C5B;
-    }
-
-    .arrow-button span {
-      font-size: 24px;
-      transition: transform 0.3s ease;
-    }
-
-    .arrow-button.active span {
-      transform: rotate(180deg);
-    }
-
-    /* Hidden Text */
-    .hidden-text {
-      padding: 20px;
-      background: #f9f9f9;
-      display: none; /* Hidden by default */
-    }
-
-    .hidden-text p {
-      margin: 0;
-      color: #666;
-    }
+    
     
  vertical-line {
     width: 5px;
@@ -373,41 +325,7 @@
       </div>
    <hr> </div>
   <!-- next layout -->
-
-<div class="container">
-    <!-- Fixed Image Card Box -->
-    <div class="card-box">
-      <img src="https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg?text=Blog+1" alt="Blog 1">
-    </div>
-
-    <!-- Arrow Button -->
-    <div class="arrow-button" onclick="toggleText()">
-      <span>▼</span>
-    </div>
-
-    <!-- Hidden Text -->
-    <div class="hidden-text" id="hiddenText">
-      <p>This is the hidden text that will be shown when you click the arrow. You can add more content here, such as descriptions, details, or additional information about the image above.</p>
-    </div>
-  </div>
-
-  <!-- JavaScript for Toggle Functionality -->
-  <script>
-    function toggleText() {
-      const hiddenText = document.getElementById('hiddenText');
-      const arrowButton = document.querySelector('.arrow-button');
-
-      // Toggle the display of the hidden text
-      if (hiddenText.style.display === 'none' || hiddenText.style.display === '') {
-        hiddenText.style.display = 'block';
-        arrowButton.classList.add('active');
-      } else {
-        hiddenText.style.display = 'none';
-        arrowButton.classList.remove('active');
-      }
-    }
-  </script>
-    
+   
   <!-- next layout -->
     
  <div class="vertical-line"></div>
