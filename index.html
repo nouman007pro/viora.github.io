@@ -328,27 +328,6 @@
      <title>Horizontal Sliding Image Gallery</title>
   <style>
     /* General Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .container {
-      max-width: 800px;
-      width: 100%;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-    }
 
     /* Gallery Container */
     .gallery {
@@ -388,7 +367,7 @@
       margin: 0 auto;
     }
 
-    .card {
+    .card1 {
       flex: 0 0 calc(33.33% - 20px); /* Show 3 images at a time */
       background: #f9f9f9;
       border-radius: 10px;
@@ -398,23 +377,23 @@
       transition: transform 0.3s ease;
     }
 
-    .card img {
+    .card1 img {
       width: 100%;
       height: 150px;
       object-fit: cover;
     }
 
-    .card h3 {
+    .card1 h3 {
       margin: 10px 0;
       font-size: 1.2rem;
     }
 
-    .card p {
+    .card1 p {
       margin: 0 10px 10px;
       color: #666;
     }
 
-    .card a {
+    .card1 a {
       display: inline-block;
       padding: 5px 10px;
       background: #1E3A8A;
@@ -424,7 +403,7 @@
       margin-bottom: 10px;
     }
 
-    .card a:hover {
+    .card1 a:hover {
       background: #152C5B;
     }
   </style>
@@ -436,9 +415,9 @@
       <button class="arrow" onclick="slideLeft()">&#10094;</button>
 
       <!-- Image Card Box -->
-      <div class="card-box" id="cardBox">
+      <div class="card-box1" id="cardBox">
         <!-- Card 1 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+1" alt="Image 1">
           <h3>Image 1</h3>
           <p>This is the description for Image 1.</p>
@@ -446,7 +425,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+2" alt="Image 2">
           <h3>Image 2</h3>
           <p>This is the description for Image 2.</p>
@@ -454,7 +433,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+3" alt="Image 3">
           <h3>Image 3</h3>
           <p>This is the description for Image 3.</p>
@@ -462,7 +441,7 @@
         </div>
 
         <!-- Card 4 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+4" alt="Image 4">
           <h3>Image 4</h3>
           <p>This is the description for Image 4.</p>
@@ -470,7 +449,7 @@
         </div>
 
         <!-- Card 5 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+5" alt="Image 5">
           <h3>Image 5</h3>
           <p>This is the description for Image 5.</p>
@@ -478,7 +457,7 @@
         </div>
 
         <!-- Card 6 -->
-        <div class="card">
+        <div class="card1">
           <img src="https://via.placeholder.com/300x150?text=Image+6" alt="Image 6">
           <h3>Image 6</h3>
           <p>This is the description for Image 6.</p>
