@@ -44,7 +44,84 @@
       height: 200px; /* Fixed height for the card box */
       flex-shrink: 0; /* Prevent the card from shrinking */
     }
+/* foooter */
+    
+     footer {
+      background: #1E3A8A;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      margin-top: 40px;
+    }
 
+    .footer-left,
+    .footer-center,
+    .footer-right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .footer-left {
+      text-align: left;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-center h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .footer-left p,
+    .footer-right p {
+      margin: 5px 0;
+    }
+
+    .footer-left a,
+    .footer-right a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-left a:hover,
+    .footer-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Up Arrow */
+    .up-arrow {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      color: #1E3A8A;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .up-arrow:hover {
+      background: #f4f4f4;
+      transform: translateY(-5px);
+    }
+  
+    /* foooter */
+    
     .card-box img {
       width: 100%;
       height: 100%;
