@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Card with Hide/Show Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+
+        .text {
+            display: none;
+            margin: 10px 0;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .toggle-btn {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .toggle-btn:focus {
+            outline: none;
+        }
+
+        .text.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image-container">
+            <img src="https://via.placeholder.com/300" alt="Sample Image">
+        </div>
+        <div class="content">
+            <h3>Card Title</h3>
+            <p class="text">This is some hidden text that will be shown or hidden when you click the arrow.</p>
+            <button class="toggle-btn">▼</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            const text = document.querySelector('.text');
+            text.classList.toggle('visible');
+
+            // Change the arrow direction
+            if (text.classList.contains('visible')) {
+                this.textContent = '▲';
+            } else {
+                this.textContent = '▼';
+            }
+        });
+    </script>
+</body>
+</html>
