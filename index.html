@@ -472,19 +472,19 @@
 
   <!-- JavaScript for Sliding Functionality -->
   <script>
-    const tasveer = document.getElementById('tasveer');
+    const pick = document.getElementById('pick');
     let scrollPosition = 0;
-    const cardWidth = document.querySelector('.tasveer').offsetWidth + 20; // Card width + gap
+    const cardWidth = document.querySelector('.slide-bar').offsetWidth + 20; // Card width + gap
 
     function slideLeft() {
       scrollPosition = Math.max(scrollPosition - cardWidth * 3, 0); // Move left by 3 cards
-      tasveer1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      pick.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
 
     function slideRight() {
-      const maxScroll = tasveer.scrollWidth - tasveer.clientWidth;
+      const maxScroll = pick.scrollWidth - pick.clientWidth;
       scrollPosition = Math.min(scrollPosition + cardWidth * 3, maxScroll); // Move right by 3 cards
-      tasveer.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      pick.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
   </script>
 
