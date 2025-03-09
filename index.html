@@ -338,7 +338,7 @@
     }
 
     /* Arrow Buttons */
-    .arrow {
+    .arrow1 {
       background: #1E3A8A;
       color: white;
       border: none;
@@ -359,7 +359,7 @@
     }
 
     /* Image Card Box */
-    .card-box {
+    .card-box1 {
       display: flex;
       gap: 20px;
       overflow: hidden;
@@ -466,25 +466,25 @@
       </div>
 
       <!-- Right Arrow -->
-      <button class="arrow" onclick="slideRight()">&#10095;</button>
+      <button class="arrow1" onclick="slideRight()">&#10095;</button>
     </div>
   </div>
 
   <!-- JavaScript for Sliding Functionality -->
   <script>
-    const cardBox = document.getElementById('cardBox');
+    const cardBox = document.getElementById('cardBox1');
     let scrollPosition = 0;
-    const cardWidth = document.querySelector('.card').offsetWidth + 20; // Card width + gap
+    const cardWidth = document.querySelector('.card1').offsetWidth + 20; // Card width + gap
 
     function slideLeft() {
       scrollPosition = Math.max(scrollPosition - cardWidth * 3, 0); // Move left by 3 cards
-      cardBox.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      cardBox1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
 
     function slideRight() {
-      const maxScroll = cardBox.scrollWidth - cardBox.clientWidth;
+      const maxScroll = cardBox1.scrollWidth - cardBox1.clientWidth;
       scrollPosition = Math.min(scrollPosition + cardWidth * 3, maxScroll); // Move right by 3 cards
-      cardBox.scrollTo({ left: scrollPosition, behavior: 'smooth' });
+      cardBox1.scrollTo({ left: scrollPosition, behavior: 'smooth' });
     }
   </script>
 
