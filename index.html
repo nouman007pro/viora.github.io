@@ -44,84 +44,6 @@
       height: 200px; /* Fixed height for the card box */
       flex-shrink: 0; /* Prevent the card from shrinking */
     }
-/* foooter */
-    
-     footer {
-      background: #1E3A8A;
-      color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      margin-top: 40px;
-    }
-
-    .footer-left,
-    .footer-center,
-    .footer-right {
-      flex: 1;
-      text-align: center;
-    }
-
-    .footer-left {
-      text-align: left;
-    }
-
-    .footer-right {
-      text-align: right;
-    }
-
-    .footer-center h2 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-
-    .footer-left p,
-    .footer-right p {
-      margin: 5px 0;
-    }
-
-    .footer-left a,
-    .footer-right a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer-left a:hover,
-    .footer-right a:hover {
-      text-decoration: underline;
-    }
-
-    /* Up Arrow */
-    .up-arrow {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background: white;
-      color: #1E3A8A;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 20px;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .up-arrow:hover {
-      background: #f4f4f4;
-      transform: translateY(-5px);
-    }
-  
-    /* foooter */
-    
     .card-box img {
       width: 100%;
       height: 100%;
@@ -594,45 +516,146 @@
   <!-- next layout -->
     <hr>
  <div class="vertical-line"></div>
-  <!-- Footer -->
-   <footer>
-    <!-- Left Side -->
-    <div class="footer-left">
-      <a href="https://viora4.netlify.app/">Home</a>
-        <a href="https://viora4-news-blogs.netlify.app/">News</a>
-      <a href="https://nouman007pro.github.io/privacy.github.io/">Privacy</a>
-      <p>Phone: 03199729298</p>
-      <p>Email: mindmentor2025@gmail.com</p>
-    </div>
-
-    <!-- Center -->
-    <div class="footer-center">
-      <h2>Viora4</h2>
-    </div>
-
-    <!-- Right Side -->
-    <div class="footer-right">
-      <p>Address: Islamabad 44000, Pakistan</p>
-    </div>
-
-    <!-- Up Arrow -->
-    <button class="up-arrow" onclick="scrollToTop()">&#8593;</button>
-  </footer>
-
-  <!-- JavaScript for Scroll to Top -->
-  <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-
-  <!-- JavaScript -->
-  <script>
-    // JavaScript for interactivity (if needed)
-    console.log("Website loaded successfully!");
-  </script>
-</body>
+             <style>
+                        * {
+                            margin: 0;
+                            padding: 0;
+                            box-sizing: border-box;
+                            font-family: Arial, sans-serif;
+                        }
+                
+                        .footer {
+                            background: #2f2f2f;
+                            color: #fff;
+                            padding: 50px 20px;
+                            line-height: 1.6;
+                        }
+                
+                        .footer-content {
+                            max-width: 1200px;
+                            margin: 0 auto;
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                            gap: 30px;
+                        }
+                
+                        .footer-section h3 {
+                            color: #fff;
+                            margin-bottom: 20px;
+                            font-size: 18px;
+                        }
+                
+                        .footer-about p {
+                            margin-bottom: 15px;
+                        }
+                
+                        .newsletter-input {
+                            display: flex;
+                            margin-top: 15px;
+                        }
+                
+                        .newsletter-input input {
+                            padding: 10px;
+                            border: none;
+                            width: 70%;
+                        }
+                
+                        .newsletter-input button {
+                            padding: 10px 15px;
+                            background: #007bff;
+                            border: none;
+                            color: white;
+                            cursor: pointer;
+                        }
+                
+                        .news-item {
+                            margin-bottom: 20px;
+                        }
+                
+                        .news-date {
+                            color: #888;
+                            font-size: 14px;
+                            margin-top: 5px;
+                        }
+                
+                        .footer-links {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            gap: 10px;
+                        }
+                
+                        .footer-links a {
+                            color: #ccc;
+                            text-decoration: none;
+                            display: block;
+                        }
+                
+                        .footer-links a:hover {
+                            color: #fff;
+                        }
+                
+                        .copyright {
+                            text-align: center;
+                            margin-top: 50px;
+                            padding-top: 30px;
+                            border-top: 1px solid #444;
+                            color: #888;
+                        }
+                
+                        @media (max-width: 768px) {
+                            .footer-content {
+                                grid-template-columns: 1fr;
+                            }
+                        }
+                    </style>
+                
+                
+                    <footer class="footer">
+                        <div class="footer-content">
+                            <div class="footer-section footer-about">
+                                <h3>About</h3>
+                                <p>Ghori Town,<br>Islamabad, 44000, Pakistan</p>
+                                <p>+92 319 972 9298</p>
+                                <p>mindmentor2025@gmail.com</p>
+                                <div class="newsletter-input">
+                                    <input type="email" placeholder="Enter email address">
+                                    <button>Submit</button>
+                                </div>
+                            </div>
+                
+                            <div class="footer-section">
+                                <h3>Latest News</h3>
+                                <div class="news-item">
+                                    <p>Trump New Policies could be game changer for america</p>
+                                    <div class="news-date">Mar. 11, 2020  Admin  19</div>
+                                </div>
+                                <div class="news-item">
+                                    <p>Ukrain President went to Saudi Arabia For Meeting with highness</p>
+                                    <div class="news-date">Mar. 11, 2020  Admin  19</div>
+                                </div>
+                            </div>
+                
+                            <div class="footer-section">
+                                <h3>Information</h3>
+                                <div class="footer-links">
+                                    <div>
+                                        <a href="https://viora4.netlify.app/">Home</a>
+                                        <a href="https://viora4-news-blogs.netlify.app/">News</a>
+                                        <a href="https://nouman007pro.github.io/privacy.github.io/">Privacy</a>
+                                        <a href=""></a>
+                                    </div>
+                                    <div>
+                                        <a href="#">Help & Support</a>
+                                        <a href="#instagram"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="copyright">
+                            <p>Copyright ©2025 All rights reserved.</p>
+                            <p>This Website Created ♥ by viora4.netlify.app Team</p>
+                        </div>
+                    </footer>
+        </body>
 </html>
