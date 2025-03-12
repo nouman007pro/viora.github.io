@@ -20,6 +20,70 @@
       background: #f4f4f4;
       color: #333;
     }
+.navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 2px solid #ddd;
+            background: #fff;
+            position: relative;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+        .nav-links a.active {
+            font-weight: bold;
+            border-bottom: 2px solid black;
+            padding-bottom: 3px;
+        }
+        .nav-links a:hover {
+            color: black;
+        }
+
+        /* Toggle button (hidden by default) */
+        .menu-toggle {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        /* Mobile view */
+        @media screen and (max-width: 600px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                background: #fff;
+                border-top: 1px solid #ddd;
+                padding: 10px 0;
+            }
+            .nav-links a {
+                padding: 10px;
+                display: block;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
 
     .container {
       max-width: 800px;
@@ -93,20 +157,7 @@
       text-align: center;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #333;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
- .gradient-line {
+    .gradient-line {
     background: linear-gradient(to bottom, transparent 90%, #1E3A8A 10%);
     padding-bottom: 10px;
   }
@@ -200,17 +251,31 @@
   </header>
 
   <!-- Navigation -->
-  <nav>
-    <a href="https://viora4.netlify.app/">Home</a>
-    <a href="https://viora4-news-blogs.netlify.app/">News</a>
-    <a href="https://viora4-blogs.netlify.app/">Blogs</a>
-                <a href="https://viora4-latest.netlify.app/">Latest</a>
+<div class="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links">
+        <a href="#" class="active">All</a>
+        <a href="https://viora4.netlify.app/">Home</a>
+        <a href="https://viora4-news-blogs.netlify.app/">News</a>
+        <a href="https://viora4-blogs.netlify.app/">Blogs</a>
+        <a href="https://nouman007pro.github.io/privacy.github.io/">Privacy</a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
+</div>
 
-    <a href="https://nouman007pro.github.io/privacy.github.io/">privacy</a>
-    <a href="#tech"></a>
-    <a href="#lifestyle"></a>
-    <a href="#contact"></a>
-  </nav>
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.nav-links');
+        nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
+    }
+</script>
+
+
+
+
+
 
   <!-- Main Content -->
   <div class="container">
