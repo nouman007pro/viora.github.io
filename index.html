@@ -15,91 +15,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blogs & News Website</title>
   <style>
-    /* CSS Styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
+        .main-nav {
+        background-color: #012149;
+          display: flex;
+        justify-content: center;
+
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+   position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    width: 100%; /* Ensure it spans full width */
+    z-index: 1000; /* Keep it above other elements */
     }
+    
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        
+    }
+    
+    /* Navigation Links */
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .nav-links li {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        transition: 0.3s;
+    }
+    
+    .nav-links .active a {
+        border-bottom: 4px solid #ff4d00;
+    }
+    
+    .nav-links a:hover {
+        color: #ffcc00;
+    }
+    
+    /* ======= LOGO ======= */
+    .logo {
+        font-size: 75px;
+        color: white;
+        font-weight: bold;
+        text-align: right;
+    }
+    
+    /* ======= HAMBURGER MENU (MOBILE) ======= */
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    /* ======= SUB NAVIGATION ======= */
+    .sub-nav {
+        background-color: #003366;
+        padding: 10px 20px;
+        font-size: 35px;
+
+
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    width: 100%; /* Ensure it spans full width */
+    z-index: 1000; /* Keep it above other elements */
+    margin-top: 15vh;
+
+    }
+    
+    .sub-nav ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .sub-nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+    
+    .sub-nav a:hover {
+        color: #ffcc00;
+    }
+    
+    /* ======= RESPONSIVE DESIGN ======= */
+    @media (max-width: 768px) {
+        .main-nav {
+       
+            background-color: #012149;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+    
+      .sub-nav {
+        background-color: #003366;
+        padding: 10px 20px;
+        font-size: 35px;
+        margin: -1.5vh;
+        margin-top: 12vh;
+        }
+    .logo {
+    font-size: 38px;
+    }
+        
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background: #002e69;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+    
+        .nav-links.show {
+            display: flex;
+        }
+    
+        .menu-toggle {
+            display: block;
+        }
+    
+        .sub-nav ul {
+            flex-direction: row;
+            text-align: left;
+            font-size: 1px;
+        }
+    }
+ 
+  
+
+    /* CSS Styles */
  body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background: #f4f4f4;
       color: #333;
+      margin-top: 28vh;
     }
-.navbar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 20px;
-            border-bottom: 2px solid #ddd;
-            background: #fff;
-            position: relative;
-        }
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: #555;
-            font-size: 14px;
-            padding: 8px 12px;
-        }
-        .nav-links a.active {
-            font-weight: bold;
-            border-bottom: 2px solid black;
-            padding-bottom: 3px;
-        }
-        .nav-links a:hover {
-            color: black;
-        }
-
-        /* Toggle button (hidden by default) */
-        .menu-toggle {
-            display: none;
-            font-size: 22px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        /* Mobile view */
-        @media screen and (max-width: 600px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                text-align: center;
-                width: 100%;
-                position: absolute;
-                top: 50px;
-                left: 0;
-                background: #fff;
-                border-top: 1px solid #ddd;
-                padding: 10px 0;
-            }
-            .nav-links a {
-                padding: 10px;
-                display: block;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
 
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-    }
+
+}
 
     /* Blog Post Styles */
     .blog-post {
@@ -179,7 +277,7 @@
       padding: 20px;
       max-width: 1200px;
       margin: 0 auto;
-    }
+          }
 
     .blog-grid {
       display: grid;
@@ -248,43 +346,58 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <marquee behavior="scroll" direction="left" style="font-size: 22px; color: #fdf5f5; font-weight: bold;">
-    Breaking News: The tournament will be leveraged for the glorification of a leader to a degree not seen since Benito Mussolini dominated the 1934 World Cup in Italy | Ukraine-U.S. ceasefire talks took 7 hours. The hard part will be getting Russia to agree. | We should love this India team but Champions Trophy felt a hollow triumph
- </marquee><h1>Viora4</h1>
-    <p>Your source for the latest updates and stories</p>
  
   
   
   
   
-  </header>
 
-  <!-- Navigation -->
-<div class="navbar">
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <div class="nav-links">
-        <a href="#" class="active">All</a>
-        <a href="https://viora4.netlify.app/"></a>
-                  <a href="https://viora4-latest.netlify.app/" class="">Latest</a>
 
-        <a href="https://viora4-news-blogs.netlify.app/">News</a>
-        <a href="https://viora4-blogs.netlify.app/">Blogs</a>
-        <a href="https://nouman007pro.github.io/privacy.github.io/">Privacy</a>
-        <a href="#"></a>
-        <a href="#"></a>
-        <a href="#"></a>
+
+
+  <nav class="main-nav">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li class="active"><a href="#">News</a></li>
+            <li><a href="#">Opiniofusan</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-sports/">Sport</a></li>
+            <li><a href="">Culture</a></li>
+            <li><a href="">Lifestyle</a></li>
+        </ul>
+        <flip-btn class="menu-toggle" onclick="toggleMenu()">☰</flip-btn>
+        <div class="logo">Viora<span>4</span></div>
     </div>
-</div>
+</nav>
 
-<script>
-    function toggleMenu() {
-        const nav = document.querySelector('.nav-links');
-        nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
-    }
-</script>
+<!-- Sub Navigation -->
+<nav class="main-nav">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li class="active"><a href="#">News</a></li>
+               <li><a href="https://nouman007pro.github.io/viora4-sports/">Sport</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-fashion/">Lifestyle</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-blogs/">Blogs</a></li>
 
+            </ul>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="logo">Viora<span>4</span></div>
+        </div>
+    </nav>
 
+    <!-- Sub Navigation -->
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="https://nouman007pro.github.io/viora4-worldnews/">World</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-usa/">US Politics</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-uk/">UK</a></li></li>
+            <li><a href="https://nouman007pro.github.io/viora4-climatecrisis/">Climate Crisis</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-middleeast/">Middle East</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-fashion/">Lifestyle</a></li>
+            <li><a href="https://nouman007pro.github.io/viora4-sports/">Sports</a></li>
+<li><a href="https://nouman007pro.github.io/viora.github.io/"><spann>Latest</spann></a></li>
+
+        </ul>
+    </nav>
 
 
 
@@ -294,99 +407,101 @@
     <div class="blog-grid">
       <!-- Blog Card 1 -->
       <div class="blog-card">
-        <img src="Screenshot 2025-03-09 205131.png"?text=Blog+1" alt="Blog 1">
-<h3>India Vs New Zealand Champions Trophy 2025 Final Live Score</h3>        <p>India and New Zealand face off in the Champions Trophy 2025 final. Follow the live score and updates here.
+        <img src="img/1.png"?text=Blog+1" alt="Blog 1">
+<h3>Athletics
+
+</h3>        <p>The World Indoor Athletics Championships commence today in Nanjing, China, running from March 21 to 23. Spain is represented by 13 athletes, including Lorea Ibarzabal and Esther Guerrero. The event features various track and field competitions over the three days. ​
+
 
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Sport</a>
       </div>
 
       <!-- Blog Card 2 -->
       <div class="blog-card">
-        <img src="5.png?text=Blog+2" alt="Blog 2">
-        <h3>IMF Calls on Pakistan to Reduce Circular Debt
-
+        <img src="img/2.png" alt="Blog 2">
+        <h3>Basketball
 
 </h3>
-        <p>The International Monetary Fund (IMF) has urged Pakistan to reduce its circular debt during ongoing talks.
+        <p>The 2025 Women's NCAA Basketball Tournament began on March 19 and will conclude with the National Championship on April 6. The tournament starts with the First Four play-in round, featuring two No. 11 seeds and two No. 16 seeds. This year's top-seeded teams are UCLA, South Carolina, USC, and Texas. Columbia University faces Washington in a First Four matchup after narrowly losing last year. The Round of 64 begins on March 21. All games will be broadcast across ESPN and ABC networks, including ABC, ESPN, ESPN2, ESPNU, and ESPNews. ​
 
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Sport</a>
       </div>
 
       <!-- Blog Card 3 -->
       <div class="blog-card">
-        <img src="Screenshot 2025-03-09 211156.png?text=Blog+3" alt="Blog 3">
-        <h3>Afghans Caught Crossing Pashin Border Illegally
+        <img src="img/3.png" alt="Blog 3">
+        <h3>Motorsport
  </h3>
-        <p>Pakistani guards detained four Afghans crossing the Pashin border illegally under the cover of darkness.
+        <p>The Formula 1 season continues with the Chinese Grand Prix this weekend at the Shanghai International Circuit. The event includes the first of six sprint races this year. Lewis Hamilton, now racing with Ferrari, aims to improve after a tenth-place finish in Australia. The Grand Prix is scheduled for 7:00 AM UK time on Sunday. ​
 
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Sport</a>
       </div>
 
 
     <!-- Blog Card 4 -->
       <div class="blog-card">
-        <img src="images/syrian leader.png" alt="Blog 3">
-        <h3>Syria Leader Calls for Peace After Civilian Casualties
-</h3>
-        <p>Syria's leader has called for peace after hundreds of civilians were killed in recent conflicts.
+        <img src="img/4.png" alt="Blog 3">
+        <h3>Wrestling</h3>
+        <p>The Minnesota Golden Gophers wrestling team is participating in the NCAA Championships starting today in Philadelphia. Gable Steveson seeks his third national title, and the team aims for its best finish under coach Brandon Eggum. Coverage is available on ESPN networks. ​
 
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Sport</a>
       </div>
     <!-- Blog Card 5 -->
       <div class="blog-card">
-        <img src="images/trump.png"?text=Blog+3" alt="Blog 3">
-        <h3>Trump Says Ukraine 'More Difficult' to Deal With Than Russia
-</h3>
-        <p>Former US President Donald Trump has stated that Ukraine is more challenging to deal with than Russia.
+        <img src="img/5.png"?text=Blog+3" alt="Blog 3">
+        <h3>Middle East Conflict
 
+        </h3>
+        <p>sraeli Airstrikes in Gaza: On March 18, Israel launched extensive airstrikes on the Gaza Strip, effectively ending a ceasefire that had been in place since January 19. The attacks resulted in over 400 Palestinian deaths, including 263 women and children, marking one of the deadliest days since the conflict began in October 2023
 </p>
-        <a href="#">Read More</a>
+        <a href="#">World</a>
       </div>
     <!-- Blog Card 6 -->
       <div class="blog-card">
-        <img src="images/future ai.png" alt="Blog 3">
-        <h3>The Future of Artificial Intelligence
-</h3>
-        <p>Discover how AI is transforming industries and what the future holds for this groundbreaking technology.
+        <img src="img/6.png" alt="Blog 3">
+        <h3>United States
 
+
+</h3>
+        <p> The Trump administration has set a March 21 deadline for New York City to end its congestion pricing program, which was implemented to reduce traffic in Manhattan's central business district and fund public transportation improvements.
 </p>
-        <a href="#">Read More</a>
+        <a href="#">World</a>
       </div>
     <!-- Blog Card 7 -->
       <div class="blog-card">
-        <img src="virat kohli.png?text=Blog+3" alt="Blog 3">
-        <h3>Virat Kohli's Stunning Performance in 2025
-</h3>
-        <p>Virat Kohli continues to dominate the cricket world with his exceptional performance in 2025.
+        <img src="img/7.png" alt="Blog 3">
+        <h3>Economic Indicators
 
+        </h3>
+        <p>: The American Chemistry Council reports that the Leading Economic Index (LEI) has increased by 0.3%, retail sales have risen by 0.2%, and chemical production is up by 0.8%.
 </p>
-        <a href="#">Read More</a>
+        <a href="#">World</a>
       </div>
     <!-- Blog Card 8 -->
       <div class="blog-card">
-        <img src="v4.png?text=Blog+3" alt="Blog 3">
-        <h3>Global Economy Faces Uncertainty in 2025
-</h3>
-        <p>Experts predict a challenging year for the global economy due to ongoing geopolitical tensions.
+        <img src="img/8.png" alt="Blog 3">
+        <h3>Entertainment
 
+        </h3>
+        <p> The Arlington Museum of Art is hosting "The Princess Diana: Accredited Access Exhibition," featuring a collection of photographs taken by Diana's trusted friend and official royal photographer, the late Anwar Hussein, and his sons
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Lifestyle</a>
       </div>
 
       
       <!-- Blog Card 9 -->
       <div class="blog-card">
-        <img src="images/healy.png" alt="Blog 4">
-        <h3>Healthy Eating Habits for 2025
-</h3>
-        <p>Start the year right with these healthy eating tips and recipes to boost your well-being.
-
+        <img src="img/9.png" alt="Blog 4">
+        <h3>Preparations for Potential Conflict</h3>
+        <p> European countries are preparing for potential large-scale conflicts amid fears of a Russian invasion.
 </p>
-        <a href="#">Read More</a>
+        <a href="#">Middle East
+
+        </a>
       </div>
       
     </div>
@@ -396,15 +511,16 @@
     <div class="blog-post">
       <!-- Fixed Card Box with Image -->
       <div class="card-box">
-        <img src="images/cease fire.png" alt="Blog 1">
+        <img src="img/10.png" alt="Blog 1">
       </div>
 
       <!-- Text Content -->
       <div class="content">
-        <h2>Ukraine and Russia agree to immediate 30-day ceasefire after negotiations</h2>
-        <p>Ukraine and Russia have agreed to an immediate 30-day ceasefire following extensive negotiations in Jeddah, with Ukrainian President Zelensky participating remotely. 
-</p>
-        <a href="#">Read More</a>
+        <h2>United States
+
+        </h2>
+        <p>The United States has dropped to its lowest position ever in the World Happiness Report, now ranking 24th</p>
+        <a href="#">US-Politics</a>
       </div>
     </div>
 
@@ -412,17 +528,16 @@
     <div class="blog-post">
       <!-- Fixed Card Box with Image -->
       <div class="card-box">
-        <img src="images/attack.png" alt="Blog 2">
+        <img src="img/11.png" alt="Blog 2">
       </div>
 
       <!-- Text Content -->
       <div class="content">
-        <h2>Explosions reported in Kyiv and Kharkiv amid ongoing air attacks
+        <h2>Ukraine's Drone Strike on Russian Airfield
 
 </h2>
-        <p>Shortly after Ukraine's ceasefire declaration, Russia launched air attacks on Kyiv and Kharkiv, triggering air raid alerts across ten regions. 
-</p>
-        <a href="#">Read More</a>
+        <p> Ukraine conducted a drone strike on a major Russian strategic bomber airfield, triggering a significant explosion and fire approximately 700 km (435 miles) from the front lines.</p>
+        <a href="#">World</a>
       </div>
     </div>
 
@@ -430,202 +545,19 @@
     <div class="blog-post">
       <!-- Fixed Card Box with Image -->
       <div class="card-box">
-        <img src="images/cease un.png" alt="Blog 3">
+        <img src="img/12.png" alt="Blog 3">
       </div>
 
       <!-- Text Content -->
       <div class="content">
-        <h2> Trump administration rejects UN's 2030 Agenda for Sustainable Development
-
+        <h2> Discovery of Oxygen in Distant Galaxy
 </h2>
-        <p>The Trump administration has rejected the UN's 2030 Agenda for Sustainable Development, citing concerns over U.S. sovereignty. 
-</p>
-        <a href="#">Read More</a>
+        <p>Astronomers have detected oxygen in the most distant galaxy ever discovered, offering further evidence that stars in the early universe matured far quicker than previously thought possible.</p>
+        <a href="#">climate-crisis</a>
       </div>
     </div><hr>
   <!-- next layout -->
-     <title>Horizontal Sliding Image Gallery</title>
-  <style>
-    /* General Styles */
-
-    /* Gallery Container */
-    .gallery {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    /* Arrow Buttons */
-    .arrow1 {
-      background: #1E3A8A;
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 24px;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.3s ease;
-    }
-
-    .arrow1:hover {
-      background: #152C5B;
-    }
-
-    /* Image Card Box */
-    .cardbox {
-      display: flex;
-      gap: 20px;
-      overflow: hidden;
-      width: calc(100% - 100px); /* Adjust for arrow buttons */
-      margin: 0 auto;
-    }
-
-    .slide-card {
-      flex: 0 0 calc(33.33% - 20px); /* Show 3 images at a time */
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .slide-card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-    }
-
-    .slide-card h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-
-    .slide-card p {
-      margin: 0 10px 10px;
-      color: #666;
-    }
-
-    .slide-card a {
-      display: inline-block;
-      padding: 5px 10px;
-      background: #1E3A8A;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-
-    .slide-card a:hover {
-      background: #152C5B;
-    }
-  </style>
-
-  <div class="container">
-    <!-- Gallery -->
-    <div class="gallery">
-      <!-- Left Arrow -->
-      <button class="arrow1" onclick="slideLeft()">&#10094;</button>
-
-      <!-- Image Card Box -->
-      <div class="cardbox" id="cardBox">
-        <!-- Card 1 -->
-        <div class="slide-card">
-          <img src="images/bbc.png?text=Image+1" alt="Image 1">
-          <h3> BBC World Service seeks full state funding to combat disinformation
-
-</h3>
-          <p>BBC executives are urging the UK government to fully fund the BBC World Service to counteract disinformation from Russia and China. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="slide-card">
-          <img src="Screenshot 2025-03-10 005350 - Copy.png?text=Image+2" alt="Image 2">
-          <h3> Qatar ends mediation efforts between Israel and Hamas due to stalled talks
-
-</h3>
-          <p>Qatar has ceased its mediation efforts between Israel and Hamas, citing a lack of progress in negotiations. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="slide-card">
-          <img src="Screenshot 2025-03-10 005512.png?text=Image+3" alt="Image 3">
-          <h3> Notre Dame's bells ring out across Paris for first time since fire
-
-</h3>
-          <p>Notre Dame Cathedral's bells have rung out across Paris for the first time since the devastating fire in 2019. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="slide-card">
-          <img src="south.png" alt="Image 4">
-          <h3> North Korea's GPS manipulation disrupts planes and vessels in South Korea
-
-</h3>
-          <p>North Korean GPS jamming has disrupted operations of dozens of planes and vessels in South Korea, escalating regional tensions. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="slide-card">
-          <img src="images/queen.png" alt="Image 5">
-          <h3>Queen Camilla to miss Remembrance events due to chest infection
-
-</h3>
-          <p>Queen Camilla will miss upcoming Remembrance events due to a chest infection, while Princess Kate plans to attend following her recovery. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="slide-card">
-          <img src="snow.png" alt="Image 6">
-          <h3>Snow patch known as UK's longest-lasting has vanished again
-
-
-
-</h3>
-          <p>A snow patch in the Scottish Highlands, typically present year-round, has melted away for the fourth consecutive year. 
-</p>
-          <a href="#">Read More</a>
-        </div>
-      </div>
-
-      <!-- Right Arrow -->
-      <button class="arrow1" onclick="slideRight()">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- JavaScript for Sliding Functionality -->
-  <script>
-    const cardbox = document.getElementById('cardBox');
-    let scrollPosition = 0;
-    const cardWidth = document.querySelector('.slide-card').offsetWidth + 20; // Card width + gap
-
-    function slideLeft() {
-      scrollPosition = Math.max(scrollPosition - cardWidth * 3, 0); // Move left by 3 cards
-      cardBox.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }
-
-    function slideRight() {
-      const maxScroll = cardBox.scrollWidth - cardBox.clientWidth;
-      scrollPosition = Math.min(scrollPosition + cardWidth * 3, maxScroll); // Move right by 3 cards
-      cardBox.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-    }
-  </script>
+     
 
   <!-- next layout -->
     <hr>
@@ -714,6 +646,8 @@
                             padding-top: 30px;
                             border-top: 1px solid #444;
                             color: #888;
+                        }spann{
+                            color: rgb(247, 128, 17);
                         }
                 
                         @media (max-width: 768px) {
@@ -756,7 +690,7 @@
                                         <a href="https://viora4.netlify.app/">Home</a>
                                         <a href="https://viora4-news-blogs.netlify.app/">News</a>
                                           <a href="https://viora4-blogs.netlify.app/">Blogs</a>
-                                                  <a href="https://viora4-latest.netlify.app/">Latest</a>
+                                                  <a href="https://viora4-latest.netlify.app/"><spann>Latest</spann></a>
 
 
                                         <a href="https://nouman007pro.github.io/privacy.github.io/">Privacy</a>
